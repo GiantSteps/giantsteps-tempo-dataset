@@ -1,0 +1,48 @@
+name:             GiantSteps (tempo+genre)
+
+contact:          Richard Vogl <richard.vogl@gmx.at>
+                  Peter Knees <peter.knees@jku.at>
+
+description:      collection of annotations for 664 2min audio previews from
+                  www.beatport.com
+
+reference:        Peter Knees, Ángel Faraldo, Perfecto Herrera, Richard Vogl,
+                  Sebastian Böck, Florian Hörschläger, Mickael Le Goff: "Two data
+                  sets for tempo estimation and key detection in electronic dance
+                  music annotated from user corrections," Proc. of the 16th
+                  Conference of the International Society for Music Information
+                  Retrieval (ISMIR'15), Oct. 2015, Malaga, Spain.
+
+annotations:      tempo (bpm), genre
+
+content:
+=========================================================================
+audio/                   original audio files in mp3 format
+md5/                     md5 hashes of original audio files
+annotations/genre/       genre annotations
+annotations/tempo/       tempo annotations
+annotations/giantsteps/  annotations in the GiantSteps project format
+splits/                  file splitting definitions
+
+notes:
+=========================================================================
+The audio files (664 files, size ~1gb) can be downloaded from http://www.beatport.com/
+using the bash script:
+
+./audio_dl.sh
+
+To download the files manually use links of the following form:
+http://geo-samples.beatport.com/lofi/<name of mp3 file>
+e.g.:
+http://geo-samples.beatport.com/lofi/5377710.LOFI.mp3
+
+To convert the audio files to .wav use (bash + sox):
+
+./convert_audio.sh
+
+To retrieve the genre information, the JSON contained within the website was parsed.
+The tempo annotation was extracted from forum entries of people correcting the bpm values (i.e. manual annotation of tempo).
+For more information please contact creators.
+
+
+
