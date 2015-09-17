@@ -96,6 +96,7 @@ do
 	else
 	    printf "${RED}MD5 did not match! Giving up for file: ${mp3filename}!${NC}  \n"
 	    errors=$(expr $errors + 1)
+	    rm "$audiofilename"
 	fi
   fi
 done
