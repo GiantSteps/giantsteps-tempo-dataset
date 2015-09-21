@@ -39,6 +39,7 @@ WHITE='\033[1;37m'
 
 errors=$(expr 0)
 successful=$(expr 0)
+backup=$(expr 0)
 totalcount=$(expr 0)
 
 printf "\n"
@@ -93,6 +94,7 @@ do
 	if [ $md5value = $md5file ]; then
 	    printf "${GREEN}MD5 OK!${NC}  \n"
 	    successful=$(expr $successful + 1)
+	    backup=$(expr $backup + 1)
 	else
 	    printf "${RED}MD5 did not match! Giving up for file: ${mp3filename}!${NC}  \n"
 	    errors=$(expr $errors + 1)
@@ -103,5 +105,6 @@ done
 
 printf "\nSummary: \n"
 printf "Files succesfully downloaded: ${successful}/${totalcount}\n"
+printf "Files from backup location: ${backup}/${successful}\n"
 printf "Errors: ${errors}\n"
 
