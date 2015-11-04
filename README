@@ -22,6 +22,7 @@ md5/                     md5 hashes of original audio files
 annotations/genre/       genre annotations
 annotations/tempo/       tempo annotations
 annotations/giantsteps/  annotations in the GiantSteps project format
+annotations/jams/	 annotations in the JAMS (https://github.com/marl/jams) format
 splits/                  file splitting definitions
 
 notes:
