@@ -3,7 +3,7 @@ name:             GiantSteps (tempo+genre)
 contact:          Richard Vogl <richard.vogl@jku.at>
                   Peter Knees <peter.knees@jku.at>
 
-description:      collection of annotations for 664 2min audio previews from
+description:      collection of annotations for 664 2min(1) audio previews from
                   www.beatport.com
 
 reference:        Peter Knees, Ángel Faraldo, Perfecto Herrera, Richard Vogl,
@@ -45,5 +45,11 @@ To retrieve the genre information, the JSON contained within the website was par
 The tempo annotation was extracted from forum entries of people correcting the bpm values (i.e. manual annotation of tempo).
 For more information please contact creators.
 
-
-
+(1): Most of the audio files are 120 seconds long. Exceptions are:
+name              length
+906760.LOFI.mp3   62
+1327052.LOFI.mp3  70
+4416506.LOFI.mp3  80
+1855660.LOFI.mp3  119
+3419452.LOFI.mp3  119
+3577631.LOFI.mp3  119
