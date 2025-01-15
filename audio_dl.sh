@@ -27,8 +27,8 @@ DEBUG=0
 
 FILES=./md5/*
 
-BASEURL=http://geo-samples.beatport.com/lofi/
-BACKUPBASEURL=http://www.cp.jku.at/datasets/giantsteps/backup/
+BASEURL=https://www.cp.jku.at/datasets/giantsteps/backup/
+BACKUPBASEURL=http://geo-samples.beatport.com/lofi/
 AUDIOPATH=./audio/
 
 RED='\033[0;31m'
@@ -68,7 +68,6 @@ do
 
   # download file and check md5 hash
   if curl -o"$audiofilename" "$mp3url"; then
-	# md5value=$(md5 -q "$audiofilename")
 	md5value=$(md5_for "$audiofilename")
   else
 	md5value="0"  
